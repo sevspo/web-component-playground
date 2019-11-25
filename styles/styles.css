@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body,
+  html {
+    background: #333;
+    color: white;
+  }
+}
+
+nav {
+  margin-left: 50px;
+}
+
+nav a, a:visited {
+  color: inherit;
+}
+
+div {
+  margin-bottom: 20px;
+
+}
+
+.main-title {
+  text-align: center;
+}
+
+my-component {
+  margin-bottom: 20px;
+}
+
+.out-styles {
+  border: 2px dashed yellowgreen;
+}
+
+/* does not work */
+.inside-div {
+  font-size: 25px;
+}
+
+/* so the slot content is 
+* styled before it is read into slot, also styles 
+* from outside dom cannot reach inside the shadow dom */
+.outside-to-slot-div {
+  font-size: 25px;
+}
